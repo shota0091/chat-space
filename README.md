@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false,  unique: ture|
+|email|string|null: false, true, unique: ture|
+|passwrod|string|null: false|
+### Association
+- has_many :groups
+- has_many :message,through:groups
 
-Things you may want to cover:
+## guropsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|interger|null: false, foreign_key: true|
+|gurop_menber|string|null: false, true, unique: ture|
+### Association
+- belong_to :user
+- has_many :messages
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|interger|null: false, foreign_key: true|
+|group_id|interger|null: false, foreign_key: true|
+|message|text|||
+|image|text|||
+### Association
+- belong_to :user
+- belong_to :guroup
