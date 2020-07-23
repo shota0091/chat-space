@@ -3,16 +3,27 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|id|integer|null: false|
 |user_name|string|null: false, unique: ture|
 |email|string|null: false, unique: ture|
 |passwrod|string|null: false|
 ### Association
 - has_many :groups
-- has_many :messages, through:　:groups
+- has_many :messages
+
+## chat-space_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|users_id|integer|null: false, foreign_key: true|
+### Association
+- has_many :groups
+- has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_menber|string|null: false, unique: ture|
 ### Association
@@ -22,7 +33,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|id|integer|null: false|
+|user-id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |message|text||
 |image|text||
