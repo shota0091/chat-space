@@ -22,7 +22,7 @@
 - has_many  :users, through: :user-groups
 - has_many :user-groups 
 
-## user-groups テーブル
+## user-groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
