@@ -8,27 +8,29 @@
 |email|string|null: false, unique: ture|
 |passwrod|string|null: false|
 ### Association
-- has_many :groups
-- has_many :messages
-
-## chat-space_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|id|integer|null: false|
-|users_id|integer|null: false, foreign_key: true|
-### Association
-- has_many :users
-- has_many :groups
+- has_many :meassages
+- has_many :groups, through: :Intermediates
+- has_many :Intermediates
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_menber|string|null: false, unique: ture|
+|group_mname|string|null: false, unique: ture|
+### Association
+- has_many :meassages
+- has_many  :users, through: :Intermediates
+- has_many :Intermediates
+
+## Intermediatesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|users_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :messages
+- belongs_to :group
 
 ## messagesテーブル
 |Column|Type|Options|
