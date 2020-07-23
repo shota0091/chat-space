@@ -9,8 +9,8 @@
 |passwrod|string|null: false|
 ### Association
 - has_many :meassages
-- has_many :groups, through: :users-groups Intermediates
-- has_many :users-groups Intermediates
+- has_many :groups, through: :user-groups 
+- has_many :user-groups 
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -19,10 +19,10 @@
 |group_mname|string|null: false, unique: ture|
 ### Association
 - has_many :meassages
-- has_many  :users, through: :users-groups Intermediates
-- has_many :users-groups Intermediates
+- has_many  :users, through: :user-groups 
+- has_many :user-groups 
 
-## users-groups Intermediatesテーブル
+## user-groups テーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
