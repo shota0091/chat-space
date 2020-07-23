@@ -17,8 +17,8 @@
 |id|integer|null: false|
 |users_id|integer|null: false, foreign_key: true|
 ### Association
+- has_many :users
 - has_many :groups
-- has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
