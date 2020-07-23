@@ -9,7 +9,7 @@
 |passwrod|string|null: false|
 ### Association
 - has_many :meassages
-- has_many :groups, through: :user-groups 
+- has_many :groups, through: :user-groups
 - has_many :user-groups 
 
 ## groupsテーブル
@@ -19,7 +19,7 @@
 |group_mname|string|null: false, unique: ture|
 ### Association
 - has_many :meassages
-- has_many  :users, through: :user-groups 
+- has_many  :users, through: :user-groups
 - has_many :user-groups 
 
 ## user-groups テーブル
