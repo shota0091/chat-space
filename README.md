@@ -22,7 +22,7 @@
 - has_many  :users, through: :Intermediates
 - has_many :Intermediates
 
-## Intermediatesテーブル
+## users-groups Intermediatesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
