@@ -1,0 +1,11 @@
+.MessageBox
+  .MessageInfo
+    .MessageInfo__userName
+      = message.user.name
+    .MessageInfo__timeStamp
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .coment
+    - if message.content.present?
+      %p.coment__message
+        = message.content
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
