@@ -44,15 +44,19 @@
     &__group{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
-      &__list{
-        font-size: 15px;
-        color: #ffffff;
-        padding: 20px 20px 5px;
-      }
-      &__message{
-        font-size: 11px;
-        color: #ffffff;
-        padding: 0 20px 40px;
+      padding: 0 20px;
+      &__menber{
+        text-decoration: none;
+        padding: 20px 0px 40px;
+        &__list{
+          font-size: 15px;
+          color: #ffffff;
+        }
+        &__message{
+          font-size: 11px;
+          color: #ffffff;
+          padding-top: 5px;
+        }
       }
     }
   }
@@ -99,34 +103,28 @@
       height: calc(100vh - 190px);
       background-color: #fafafa;
       padding: 35px 40px 0;
-      &__userName{
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-        display: flex;
-        &__timeStamp{
-          font-weight: normal;
-          color: #999999;
-          font-size: 12px;
-          padding-left: 10px;
+      .MessageBox{
+          margin-bottom: 46px;
+          .MessageInfo{
+            display: flex;
+          &__userName{
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__timeStamp{
+              color: #999999;
+              font-size: 12px;
+              padding-left: 10px;
+          }
         }
-      }
-      &__otherName{
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-        display: flex;
-        &__timeStamp{
-          font-weight: normal;
-          color: #999999;
-          font-size: 12px;
-          padding-left: 10px;
-        }
-      }
-      &__coment{
+      .coment{
+        margin-top: 12px;
+        &__message{
         color: #434a54;
         font-size: 14px;
-        margin: 12px 0 46px 0;
+        }
+      }
       }
     }
     &__messageForm{
