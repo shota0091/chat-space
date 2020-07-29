@@ -45,17 +45,20 @@
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       padding: 0 20px;
+      text-decoration: none;
       &__menber{
-        text-decoration: none;
         padding: 20px 0px 40px;
-        &__list{
-          font-size: 15px;
-          color: #ffffff;
-        }
-        &__message{
-          font-size: 11px;
-          color: #ffffff;
-          padding-top: 5px;
+        &__content{
+          text-decoration: none;
+          &__list{
+            font-size: 15px;
+            color: #ffffff;
+          }
+          &__message{
+            font-size: 11px;
+            color: #ffffff;
+            padding-top: 5px;
+          }
         }
       }
     }
